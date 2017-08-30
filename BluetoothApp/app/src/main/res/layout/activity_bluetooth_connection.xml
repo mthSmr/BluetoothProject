@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.bluetoothapp.BluetoothConnectionActivity">
+
+    <LinearLayout
+        android:id="@+id/bt_paired_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Display selection"
+            android:visibility="gone"
+            android:onClick="displaySelection"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paired devices"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:background="#283593"/>
+
+        <ListView
+            android:id="@+id/paired_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan results"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:background="#283593"/>
+
+        <Button
+            android:id="@+id/scan_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan Bluetooth Network"
+            android:onClick="doDiscovery" />
+
+        <ProgressBar
+            android:id="@+id/bt_scan_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone">
+        </ProgressBar>
+
+        <ListView
+            android:id="@+id/bt_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
